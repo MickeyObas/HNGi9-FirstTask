@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+app.get("/")
+
 @app.get("/profile")
 def get_profile():
     return {"slackUsername": "Michael Goke",
