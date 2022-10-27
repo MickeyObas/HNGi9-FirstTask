@@ -15,8 +15,7 @@ app.add_middleware(
 )
 
 
-
-@app.get("/profile")
+@app.get("/")
 def get_profile():
     return {"slackUsername": "MickeyTheBrave",
             "backend": True,
