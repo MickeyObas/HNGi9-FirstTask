@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from pydantic import BaseModel # Might not need this for now.
+
 app = FastAPI()
 
 app.get("/")
