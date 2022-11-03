@@ -43,8 +43,7 @@ def calculate(Input: schemas.Input):
         output = {
             "slackUsername": "MickeyTheBrave",
             "result": result,
-            "operation_type": operation_type,
-            "howdy": "hi"
+            "operation_type": operation_type
         }
         
         return output
