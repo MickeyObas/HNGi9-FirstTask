@@ -8,3 +8,8 @@ class Input(BaseModel):
 
     class Config:
         extra = "forbid" # I don't want my endpoint accepting surplus values.
+
+class Output(BaseModel):
+    slackUsername= "MickeyTheBrave"
+    operation_type: str
+    result: int

@@ -24,7 +24,7 @@ def get_profile():
             "bio": "I'm a third year Computer Science undegraduate here at FUTA. When i'm not geeking out over tech stuff, i enjoy watching anime, playing football, playing videogames and so much more! Looking forward to making more friends here. Ikuzoo!"}
 
 
-@app.post("/calculate/", status_code=status.HTTP_200_OK)
+@app.post("/calculate/", response_model=schemas.Output)
 def calculate(Input: schemas.Input):
     input_request = Input.dict()
     operation_type = input_request['operation_type']
@@ -43,7 +43,8 @@ def calculate(Input: schemas.Input):
         output = {
             "slackUsername": "MickeyTheBrave",
             "result": result,
-            "operation_type": operation_type
+            "operation_type": operation_type,
+            "howdy": "hi"
         }
         
         return output
